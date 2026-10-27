@@ -126,7 +126,8 @@ button {
 
 .navbar nav a {
     font-size: 14px;
-    color: var(--muted);
+    color: var(--brown-dark); /* Warna tebal & tegas */
+    font-weight: 600;         /* Semibold */
     transition: color 0.2s;
 }
 
@@ -154,10 +155,11 @@ button {
     font-size: 25px;
 }
 
-/* HERO SECTION DEKORATIF */
+/* TRANSPARENT SECTIONS */
 .hero,
 .menu-section,
 .about,
+.reviews-section,
 .order-section {
     background: transparent !important;
 }
@@ -324,6 +326,48 @@ button {
     z-index: 1;
 }
 
+/* BADGE MELAYANG DI GAMBAR HERO */
+.floating-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: rgba(255, 253, 249, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 25px rgba(70, 45, 28, 0.15);
+    z-index: 3;
+    animation: floatAnim 4s ease-in-out infinite;
+}
+
+.badge-top {
+    top: 25px;
+    right: -15px;
+}
+
+.floating-badge span {
+    font-size: 20px;
+}
+
+.floating-badge strong {
+    display: block;
+    font-size: 13px;
+    color: var(--brown-dark);
+}
+
+.floating-badge small {
+    display: block;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
 .image-label {
     position: absolute;
     bottom: 30px;
@@ -446,6 +490,34 @@ button {
     font-size: 14px;
 }
 
+/* CATEGORY FILTER BUTTONS */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 9px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: rgba(255, 253, 249, 0.7);
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--brown);
+    color: white;
+    border-color: var(--brown);
+    box-shadow: 0 4px 15px rgba(81, 55, 41, 0.2);
+}
+
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -501,6 +573,21 @@ button {
     margin-bottom: 10px;
 }
 
+.menu-tag.tag-bestseller {
+    background: #eab308;
+    color: #422006;
+}
+
+.menu-tag.tag-favorit {
+    background: var(--caramel);
+    color: white;
+}
+
+.menu-tag.tag-refreshing {
+    background: #10b981;
+    color: white;
+}
+
 .menu-info h3 {
     font-family: 'Playfair Display', serif;
     font-size: 21px;
@@ -544,6 +631,48 @@ button {
     transform: rotate(90deg);
 }
 
+/* REVIEWS SECTION */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.review-card {
+    background: rgba(255, 253, 249, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-stars {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.review-card p {
+    font-size: 13px;
+    color: var(--text);
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.review-card strong {
+    font-size: 12px;
+    color: var(--caramel);
+    display: block;
+}
+
+/* ORDER SECTION */
 .order-section {
     display: grid;
     grid-template-columns: 1fr 0.85fr;
@@ -552,12 +681,62 @@ button {
 }
 
 .order-copy {
-    padding-top: 25px;
+    padding-top: 10px;
 }
 
-.order-copy > p:last-child {
+.order-copy > p:not(.eyebrow) {
     color: var(--muted);
-    max-width: 430px;
+    max-width: 450px;
+    font-size: 15px;
+}
+
+.order-features {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    background: rgba(255, 253, 249, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(70, 45, 28, 0.08);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--cream-dark);
+    font-size: 18px;
+    border-radius: 50%;
+    margin-top: 2px;
+}
+
+.feature-item strong {
+    display: block;
+    font-size: 14px;
+    color: var(--brown-dark);
+    margin-bottom: 2px;
+}
+
+.feature-item p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
 }
 
 .order-card {
@@ -791,6 +970,10 @@ button {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .order-section {
         gap: 30px;
     }
@@ -871,7 +1054,8 @@ button {
         padding: 60px 6%;
     }
 
-    .menu-grid {
+    .menu-grid,
+    .reviews-grid {
         grid-template-columns: 1fr;
     }
 
