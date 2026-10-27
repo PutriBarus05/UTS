@@ -1,292 +1,291 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="KopiKita - kopi pilihan, suasana hangat, dan momen kecil yang berarti.">
-  <title>KopiKita | Your Daily Coffee Moment</title>
-  <link rel="stylesheet" href="../CSS/style.css">
-  <script src="../JS/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KopiKita | Coffee & Good Mood</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JS/script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar container" aria-label="Navigasi utama">
-      <a class="brand" href="#beranda" aria-label="KopiKita beranda">
-        <span class="brand-icon">☕</span>
-        <span>KopiKita<span class="brand-dot">.</span></span>
-      </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navLinks">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a class="nav-link active" href="#beranda">Beranda</a>
-        <a class="nav-link" href="#tentang">Tentang</a>
-        <a class="nav-link" href="#menu">Menu</a>
-        <a class="nav-link" href="#ulasan">Ulasan</a>
-        <a class="nav-link" href="#faq">FAQ</a>
-        <a class="button button-small" href="#pesan">Pesan Sekarang</a>
-      </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Aktifkan dark mode" title="Ganti tema">☾</button>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero section" id="beranda">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow"><span class="eyebrow-line"></span> YOUR DAILY COFFEE MOMENT</span>
-          <h1>Cerita indah dimulai dari <span>secangkir kopi.</span></h1>
-          <p>Temukan rasa favoritmu di KopiKita. Kopi pilihan, suasana hangat, dan momen kecil yang membuat harimu lebih berarti.</p>
-          <div class="hero-actions">
-            <a class="button" href="#menu">Jelajahi Menu <span aria-hidden="true">→</span></a>
-            <a class="button button-outline" href="#tentang">Kenali Kami</a>
-          </div>
-          <div class="hero-note"><span class="status-dot"></span> Dibuat dengan hati, disajikan dengan rasa.</div>
-        </div>
-        <div class="hero-visual" aria-label="Foto kopi latte">
-          <div class="hero-orbit"></div>
-          <div class="floating-label label-fresh"><span>✦</span> Freshly brewed</div>
-          <img class="hero-photo" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=85" alt="Secangkir kopi latte hangat" fetchpriority="high">
-          <div class="floating-label label-mood"><strong>100%</strong><span>Good mood</span></div>
-          <span class="spark spark-one">✦</span>
-          <span class="spark spark-two">✧</span>
-        </div>
-      </div>
-    </section>
+    <header class="navbar">
+        <a href="#beranda" class="logo">Kopi<span>Kita.</span></a>
 
-    <section class="benefits-strip" aria-label="Keunggulan KopiKita">
-      <div class="container benefits-grid">
-        <article class="benefit">
-          <span class="benefit-icon">✿</span>
-          <div><h2>Biji Kopi Pilihan</h2><p>Rasa nikmat dari bahan berkualitas.</p></div>
-        </article>
-        <article class="benefit">
-          <span class="benefit-icon">♡</span>
-          <div><h2>Dibuat dengan Hati</h2><p>Disiapkan fresh untuk setiap pesanan.</p></div>
-        </article>
-        <article class="benefit">
-          <span class="benefit-icon">☀</span>
-          <div><h2>Suasana Hangat</h2><p>Teman terbaik untuk jeda harianmu.</p></div>
-        </article>
-      </div>
-    </section>
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka navigasi">
+            ☰
+        </button>
 
-    <section class="section about-section" id="tentang">
-      <div class="container about-grid">
-        <div class="about-visual">
-          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=900&q=85" alt="Suasana nyaman di kedai kopi" loading="lazy">
-          <div class="photo-note">
-            <span>EST. WITH LOVE</span>
-            <strong>Secangkir jeda untukmu.</strong>
-          </div>
-        </div>
-        <div class="about-copy">
-          <span class="eyebrow">CERITA KAMI</span>
-          <h2>Bukan sekadar kopi, tapi <span>teman untuk setiap cerita.</span></h2>
-          <p>KopiKita hadir untuk menemani pagi yang sibuk, obrolan bersama teman, sampai waktu tenang untuk diri sendiri. Kami percaya, hal sederhana bisa membuat hari terasa lebih istimewa.</p>
-          <p>Pilih minuman favoritmu, nikmati aromanya, dan ciptakan momen kecil versimu sendiri.</p>
-          <a class="text-link" href="#menu">Temukan menu favorit <span>→</span></a>
-          <div class="mini-stats">
-            <div><strong>Fresh</strong><span>Diracik saat dipesan</span></div>
-            <div><strong>Cozy</strong><span>Rasa dan suasana hangat</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+        <nav id="navMenu">
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#menu">Menu</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
 
-    <section class="section menu-section" id="menu">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">PILIHAN FAVORIT</span>
-          <h2>Temukan <span>teman harimu.</span></h2>
-          <p>Dari kopi klasik sampai camilan manis, ada sesuatu untuk setiap suasana.</p>
-        </div>
-        <div class="filter-buttons" role="group" aria-label="Filter kategori menu">
-          <button class="filter-button active" data-category="all" aria-pressed="true">Semua Menu</button>
-          <button class="filter-button" data-category="coffee" aria-pressed="false">Coffee</button>
-          <button class="filter-button" data-category="non-coffee" aria-pressed="false">Non-Coffee</button>
-          <button class="filter-button" data-category="snack" aria-pressed="false">Snack</button>
-        </div>
+        <a href="#menu" class="nav-button">Pesan Sekarang ↗</a>
+    </header>
 
-        <div class="menu-grid">
-          <article class="menu-card" data-category="coffee">
-            <div class="menu-visual">
-              <img class="menu-photo" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Es kopi susu" loading="lazy">
-              <span class="menu-tag">BEST SELLER</span>
+    <main>
+        <section class="hero" id="beranda">
+            <div class="hero-content">
+                <p class="eyebrow">✦ FRESHLY BREWED, MADE WITH LOVE</p>
+                <h1>Secangkir kopi,<br>sejuta <span>inspirasi.</span></h1>
+                <p class="hero-description">
+                    Temukan rasa favoritmu dan nikmati momen sederhana
+                    bersama secangkir kopi dari KopiKita.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#menu" class="button button-dark">Jelajahi Menu ↗</a>
+                    <a href="#tentang" class="text-link">Kenali KopiKita</a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="note-icon">✦</span>
+                    <div>
+                        <strong>100% Good Mood</strong>
+                        <p>Good coffee, better days.</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-info">
-              <span class="menu-category">COFFEE</span>
-              <h3>Classic Latte</h3>
-              <p>Espresso dan susu lembut dengan rasa seimbang.</p>
-              <div class="menu-bottom"><strong>Rp22.000</strong><button class="add-button" data-name="Classic Latte" data-price="22000" aria-label="Tambah Classic Latte">+</button></div>
-            </div>
-          </article>
 
-          <article class="menu-card" data-category="coffee">
-            <div class="menu-visual">
-              <img class="menu-photo" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Kopi espresso" loading="lazy">
-              <span class="menu-tag">COFFEE TIME</span>
+            <div class="hero-image-wrap">
+                <img
+                    src="../Image/image1.jpg"
+                    alt="Suasana hangat di dalam kafe KopiKita"
+                    class="hero-image"
+                    onerror="this.onerror=null;this.src='../Image/menu1.jpg';"
+                >
+                <div class="image-label">
+                    <span>☕</span>
+                    <div>
+                        <strong>Your daily coffee spot</strong>
+                        <small>Take a sip, take a break.</small>
+                    </div>
+                </div>
             </div>
-            <div class="menu-info">
-              <span class="menu-category">COFFEE</span>
-              <h3>Caramel Macchiato</h3>
-              <p>Kopi dengan sentuhan karamel yang manis.</p>
-              <div class="menu-bottom"><strong>Rp26.000</strong><button class="add-button" data-name="Caramel Macchiato" data-price="26000" aria-label="Tambah Caramel Macchiato">+</button></div>
-            </div>
-          </article>
+        </section>
 
-          <article class="menu-card" data-category="non-coffee">
-            <div class="menu-visual">
-              <img class="menu-photo" src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=85" alt="Minuman matcha" loading="lazy">
-              <span class="menu-tag">FRESH PICK</span>
-            </div>
-            <div class="menu-info">
-              <span class="menu-category">NON-COFFEE</span>
-              <h3>Matcha Cloud</h3>
-              <p>Matcha dengan perpaduan susu yang lembut.</p>
-              <div class="menu-bottom"><strong>Rp24.000</strong><button class="add-button" data-name="Matcha Cloud" data-price="24000" aria-label="Tambah Matcha Cloud">+</button></div>
-            </div>
-          </article>
+        <section class="benefits">
+            <div>☕ <span>Kopi berkualitas</span></div>
+            <div>♡ <span>Dibuat dengan cinta</span></div>
+            <div>✦ <span>Teman setiap cerita</span></div>
+        </section>
 
-          <article class="menu-card" data-category="non-coffee">
-            <div class="menu-visual">
-              <img class="menu-photo" src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=800&q=85" alt="Minuman cokelat dingin" loading="lazy">
-              <span class="menu-tag">SWEET MOOD</span>
+        <section class="about section" id="tentang">
+            <div class="about-image">
+                <img
+                    src="../Image/image2.jpg"
+                    alt="Kopi latte dengan latte art"
+                >
+                <span class="image-sticker">Coffee<br>makes it better ☕</span>
             </div>
-            <div class="menu-info">
-              <span class="menu-category">NON-COFFEE</span>
-              <h3>Choco Mood</h3>
-              <p>Cokelat nikmat untuk menemani waktu santai.</p>
-              <div class="menu-bottom"><strong>Rp20.000</strong><button class="add-button" data-name="Choco Mood" data-price="20000" aria-label="Tambah Choco Mood">+</button></div>
-            </div>
-          </article>
 
-          <article class="menu-card" data-category="snack">
-            <div class="menu-visual">
-              <img class="menu-photo" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85" alt="Croissant renyah" loading="lazy">
-              <span class="menu-tag">BAKED FRESH</span>
+            <div class="about-content">
+                <p class="eyebrow">✦ CERITA KOPIKITA</p>
+                <h2>Bukan sekadar kopi,<br>tapi teman <span>bercerita.</span></h2>
+                <p>
+                    Kami percaya setiap cangkir punya cerita. KopiKita hadir
+                    untuk menemani waktu produktif, obrolan hangat, dan jeda
+                    kecil di tengah kesibukanmu.
+                </p>
+                <a href="#menu" class="text-link">Temukan favoritmu →</a>
             </div>
-            <div class="menu-info">
-              <span class="menu-category">SNACK</span>
-              <h3>Butter Croissant</h3>
-              <p>Pastry renyah untuk teman minum kopi.</p>
-              <div class="menu-bottom"><strong>Rp18.000</strong><button class="add-button" data-name="Butter Croissant" data-price="18000" aria-label="Tambah Butter Croissant">+</button></div>
-            </div>
-          </article>
+        </section>
 
-          <article class="menu-card" data-category="snack">
-            <div class="menu-visual">
-              <img class="menu-photo" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85" alt="Potongan kue cokelat" loading="lazy">
-              <span class="menu-tag">SWEET TREAT</span>
+        <section class="menu-section section" id="menu">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">✦ PILIHAN HARI INI</p>
+                    <h2>Menu favorit <span>kamu.</span></h2>
+                    <p>Dari yang creamy sampai yang menyegarkan.</p>
+                </div>
             </div>
-            <div class="menu-info">
-              <span class="menu-category">SNACK</span>
-              <h3>Sweet Slice</h3>
-              <p>Potongan kue manis untuk hari spesialmu.</p>
-              <div class="menu-bottom"><strong>Rp20.000</strong><button class="add-button" data-name="Sweet Slice" data-price="20000" aria-label="Tambah Sweet Slice">+</button></div>
+
+            <div class="menu-grid">
+                <article class="menu-card">
+                    <img src="../Image/image2.jpg" alt="Creamy Cafe Latte" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">BEST SELLER</span>
+                        <h3>Creamy Cafe Latte</h3>
+                        <p>Espresso lembut berpadu dengan susu creamy.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp22.000</strong>
+                            <button class="add-button" data-name="Creamy Cafe Latte" data-price="22000">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="../Image/image3.jpg" alt="Kopi Susu Aren" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">FAVORIT</span>
+                        <h3>Kopi Susu Aren</h3>
+                        <p>Perpaduan kopi, susu, dan manis gula aren.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp18.000</strong>
+                            <button class="add-button" data-name="Kopi Susu Aren" data-price="18000">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="../Image/image4.jpg" alt="Classic Americano" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">CLASSIC</span>
+                        <h3>Classic Americano</h3>
+                        <p>Karakter espresso yang kuat dan menyegarkan.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp16.000</strong>
+                            <button class="add-button" data-name="Classic Americano" data-price="16000">+</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="menu-card">
+                    <img src="../Image/image5.jpg" alt="Cappuccino / Flat White" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">FAVORIT</span>
+                        <h3>Cappuccino / Flat White</h3>
+                        <p>Perpaduan espresso mantap dengan susu hangat dan microfoam halus yang lembut di mulut.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp22.000</strong>
+                            <button class="add-button" data-name="Cappuccino / Flat White" data-price="22000">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="../Image/image6.jpg" alt="Matcha Latte" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">CLASSIC</span>
+                        <h3>Matcha Latte</h3>
+                        <p>Perpaduan otentik teh hijau Jepang (matcha) yang kaya dan susu segar yang lembut dan creamy.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp24.000</strong>
+                            <button class="add-button" data-name="Matcha Latte" data-price="24000">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="../Image/image7.jpg" alt="Chocolate Creamy" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">CLASSIC</span>
+                        <h3>Chocolate Creamy</h3>
+                        <p>Cokelat pekat premium dingin yang kaya rasa, disajikan dengan creamy foam yang lembut di atasnya.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp16.000</strong>
+                            <button class="add-button" data-name="Chocolate Creamy" data-price="16000">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="../Image/image8.jpg" alt="Red Velvet / Taro Latte" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">CLASSIC</span>
+                        <h3>Red Velvet / Taro Latte</h3>
+                        <p>Keunikan rasa manis nan gurih dari Taro/Red Velvet khas yang berpadu dengan susu creamy.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp18.000</strong>
+                            <button class="add-button" data-name="Red Velvet / Taro Latte" data-price="18000">+</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="menu-card">
+                    <img src="../Image/image9.jpg" alt="Berry Refresher" class="menu-image">
+                    <div class="menu-info">
+                        <span class="menu-tag">REFRESHING</span>
+                        <h3>Berry Refresher</h3>
+                        <p>Kesegaran alami dari buah beri asli, perasan jeruk nipis, dan daun mint yang berpadu dengan soda.</p>
+                        <div class="menu-bottom">
+                            <strong>Rp20.000</strong>
+                            <button class="add-button" data-name="Berry Refresher" data-price="20000">+</button>
+                        </div>
+                    </div>
+                </article>
             </div>
-          </article>
+        </section>
+
+        <section class="order-section section" id="kontak">
+            <div class="order-copy">
+                <p class="eyebrow">✦ WAKTUNYA NGOPI</p>
+                <h2>Kopi favoritmu<br>tinggal <span>selangkah.</span></h2>
+                <p>Pilih menu, masukkan pesanan ke keranjang, lalu isi formulir pemesanan.</p>
+            </div>
+
+            <div class="order-card">
+                <h3>Keranjang KopiKita</h3>
+                <div id="cartItems">
+                    <p class="empty-cart">Belum ada menu yang dipilih.</p>
+                </div>
+                <div class="cart-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">Rp0</strong>
+                </div>
+
+                <form id="orderForm">
+                    <label for="customerName">Nama kamu</label>
+                    <input type="text" id="customerName" placeholder="Masukkan nama" required>
+
+                    <label for="customerNote">Catatan pesanan</label>
+                    <textarea id="customerNote" placeholder="Contoh: gula sedikit, tanpa es"></textarea>
+
+                    <button type="submit" class="button button-dark full-button">
+                        Buat Pesanan →
+                    </button>
+                </form>
+                <p class="demo-note">*Demo website: pesanan belum dikirim ke sistem pembayaran atau toko.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Kolom 1: Brand & Sosial Media -->
+            <div class="footer-col">
+                <a href="#beranda" class="logo">Kopi<span>Kita.</span></a>
+                <p>Teman terbaik untuk setiap cerita dan secangkir inspirasi.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram">📸 Instagram</a>
+                    <a href="#" aria-label="WhatsApp">💬 WhatsApp</a>
+                    <a href="#" aria-label="TikTok">🎵 TikTok</a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Navigasi Cepat -->
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#tentang">Tentang Kami</a></li>
+                    <li><a href="#menu">Menu Favorit</a></li>
+                    <li><a href="#kontak">Pemesanan</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Jam Operasional -->
+            <div class="footer-col">
+                <h4>Jam Buka</h4>
+                <p>Senin - Jumat: 08.00 - 22.00 WIB</p>
+                <p>Sabtu - Minggu: 09.00 - 23.00 WIB</p>
+            </div>
+
+            <!-- Kolom 4: Lokasi -->
+            <div class="footer-col">
+                <h4>Lokasi Kafe</h4>
+                <p>📍 Jl. Inspirasi Kopi No. 24, Semarang</p>
+                <p>✉️ halo@kopikita.id</p>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section reviews-section" id="ulasan">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">KATA MEREKA</span>
-          <h2>Momen kecil, <span>cerita besar.</span></h2>
-          <p>Contoh ulasan untuk memperlihatkan pengalaman pelanggan di landing page.</p>
+        <div class="footer-bottom">
+            <small>© <span id="year"></span> KopiKita. Dibuat dengan ☕ dan cinta.</small>
         </div>
-        <div class="reviews-grid">
-          <article class="review-card">
-            <div class="stars" aria-label="5 dari 5 bintang">★★★★★</div>
-            <p>“Kopinya enak dan tampilannya cantik. Cocok buat nemenin belajar atau ngobrol santai.”</p>
-            <div class="review-person"><span class="avatar">A</span><div><strong>Annisa</strong><small>Pencinta latte</small></div></div>
-          </article>
-          <article class="review-card featured-review">
-            <div class="stars" aria-label="5 dari 5 bintang">★★★★★</div>
-            <p>“Matcha-nya lembut, croissant-nya juga pas. Suka banget sama suasana hangat KopiKita.”</p>
-            <div class="review-person"><span class="avatar">D</span><div><strong>Dimas</strong><small>Pengunjung</small></div></div>
-          </article>
-          <article class="review-card">
-            <div class="stars" aria-label="5 dari 5 bintang">★★★★★</div>
-            <p>“Pilihan menunya beragam dan proses pesan di website ini gampang dipahami.”</p>
-            <div class="review-person"><span class="avatar">N</span><div><strong>Nadia</strong><small>Penikmat kopi</small></div></div>
-          </article>
-        </div>
-        <p class="sample-note">*Ulasan di atas adalah contoh tampilan, bukan testimoni pelanggan terverifikasi.</p>
-      </div>
-    </section>
+    </footer>
 
-    <section class="section order-section" id="pesan">
-      <div class="container order-grid">
-        <div class="order-copy">
-          <span class="eyebrow">YOUR COFFEE, YOUR MOMENT</span>
-          <h2>Sudah tahu mau <span>pesan apa?</span></h2>
-          <p>Pilih menu favoritmu, atur jumlahnya, lalu isi nama untuk melihat ringkasan pesanan demo.</p>
-          <div class="order-promise"><span>✓</span> Mudah dipilih <span>✓</span> Harga terlihat <span>✓</span> Praktis</div>
-          <img class="order-photo" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85" alt="Kopi dan biji kopi di atas meja" loading="lazy">
-        </div>
-        <div class="cart-card">
-          <div class="cart-heading">
-            <div><h3>Keranjang Pesanan</h3><p><span id="cartCount">0 item</span> dipilih</p></div>
-            <span class="cart-heading-icon">🛍️</span>
-          </div>
-          <ul class="cart-list" id="cartList" aria-live="polite"><li class="empty-cart">Keranjang masih kosong. Yuk, pilih menu!</li></ul>
-          <div class="cart-total"><span>Total pembayaran</span><strong id="cartTotal">Rp0</strong></div>
-          <button class="clear-cart" id="clearCart" type="button">Kosongkan keranjang</button>
-          <form class="order-form" id="orderForm">
-            <div class="field"><label for="customerName">Nama pemesan</label><input id="customerName" name="customerName" type="text" placeholder="Masukkan nama kamu" required maxlength="60"></div>
-            <div class="field"><label for="customerNote">Catatan (opsional)</label><input id="customerNote" name="customerNote" type="text" placeholder="Contoh: less sugar" maxlength="120"></div>
-            <button class="button order-submit" type="submit">Buat Pesanan Demo <span>→</span></button>
-          </form>
-          <p class="demo-disclaimer">Ini merupakan simulasi front-end. Pesanan tidak dikirim ke kedai dan tidak ada pembayaran sungguhan.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faq-section" id="faq">
-      <div class="container faq-container">
-        <div class="section-heading">
-          <span class="eyebrow">ADA PERTANYAAN?</span>
-          <h2>Yang sering <span>ditanyakan.</span></h2>
-        </div>
-        <div class="faq-list">
-          <article class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" type="button">Apakah bisa memesan lewat website ini?<span>+</span></button></h3>
-            <div class="faq-answer" hidden><p>Website ini adalah proyek latihan. Formulir hanya menampilkan ringkasan pesanan sebagai simulasi dan belum terhubung ke sistem pemesanan sungguhan.</p></div>
-          </article>
-          <article class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" type="button">Bagaimana cara menambah menu?<span>+</span></button></h3>
-            <div class="faq-answer" hidden><p>Pilih bagian menu, lalu tekan tombol plus pada kartu produk. Jumlah dan total harga akan otomatis diperbarui.</p></div>
-          </article>
-          <article class="faq-item">
-            <h3><button class="faq-question" aria-expanded="false" type="button">Apakah tampilan mendukung HP?<span>+</span></button></h3>
-            <div class="faq-answer" hidden><p>Ya. CSS menggunakan media query agar navigasi, kartu menu, dan formulir menyesuaikan ukuran layar.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div class="container cta-content">
-        <div>
-          <span class="eyebrow">TAKE A LITTLE BREAK</span>
-          <h2>Hari yang sibuk juga butuh jeda.</h2>
-          <p>Temukan rasa favoritmu dan nikmati momen kecil hari ini.</p>
-        </div>
-        <a class="button button-light" href="#menu">Lihat Menu <span>→</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <a class="brand" href="#beranda"><span class="brand-icon">☕</span><span>KopiKita<span class="brand-dot">.</span></span></a>
-      <p>© <span id="currentYear"></span> KopiKita. Dibuat untuk proyek UTS Pemrograman Web Dasar.</p>
-      <a href="#beranda" class="back-top">Kembali ke atas ↑</a>
-    </div>
-  </footer>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
