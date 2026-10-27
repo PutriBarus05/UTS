@@ -15,7 +15,28 @@ navMenu.querySelectorAll("a").forEach(function (link) {
 // Tahun otomatis di footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Keranjang pesanan
+// FILTER KATEGORI MENU
+const filterBtns = document.querySelectorAll(".filter-btn");
+const menuCards = document.querySelectorAll(".menu-card");
+
+filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const category = btn.dataset.category;
+
+        menuCards.forEach(function (card) {
+            if (category === "all" || card.dataset.category === category) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    });
+});
+
+// KERANJANG PESANAN
 const cart = {};
 
 const cartItems = document.getElementById("cartItems");
@@ -94,7 +115,7 @@ function changeQuantity(name, change) {
     renderCart();
 }
 
-// Tombol tambah menu (Bekerja otomatis untuk 8 menu)
+// Tombol tambah menu
 document.querySelectorAll(".add-button").forEach(function (button) {
     button.addEventListener("click", function () {
         const name = button.dataset.name;
@@ -112,7 +133,7 @@ document.querySelectorAll(".add-button").forEach(function (button) {
     });
 });
 
-// Form pemesanan demo
+// FORM PEMESANAN INTEGRASI WHATSAPP
 document.getElementById("orderForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -129,22 +150,21 @@ document.getElementById("orderForm").addEventListener("submit", function (event)
     const orderDetails = names.map(function (name) {
         const item = cart[name];
         total += item.price * item.quantity;
-        return name + " x" + item.quantity;
+        return `• ${name} (${item.quantity}x)`;
     });
 
-    let message =
-        "Terima kasih, " + customerName + "!\n\n" +
-        "Pesanan demo kamu:\n" +
-        orderDetails.join("\n") + "\n\n" +
-        "Total: " + formatRupiah(total);
+    let waMessage = `Halo Barista KopiKita! 👋\nSaya mau pesan kopi nih:\n\n*Nama:* ${customerName}\n\n*Pesanan:*\n${orderDetails.join("\n")}\n\n*Total:* ${formatRupiah(total)}`;
 
     if (customerNote) {
-        message += "\nCatatan: " + customerNote;
+        waMessage += `\n*Catatan:* ${customerNote}`;
     }
 
-    message += "\n\nIni hanya simulasi website. Pesanan belum dikirim ke toko.";
+    waMessage += `\n\nTerima kasih! ☕`;
 
-    alert(message);
+    const waNumber = "6281234567890"; // Ganti dengan nomor WhatsApp toko/pribadi
+    const waUrl = `https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`;
+
+    window.open(waUrl, "_blank");
 });
 
 // Tampilan keranjang awal
